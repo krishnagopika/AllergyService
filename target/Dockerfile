@@ -7,3 +7,5 @@ COPY --from=build target/allergy-service-1.0.0-SNAPSHOT.jar allergy-service-1.0.
 
 FROM openjdk:17-jdk-alpine
 EXPOSE 8081
+
+ENTRYPOINT ["java","-jar","/AllergyService/target/allergy-service-1.0.0-SNAPSHOT"]
