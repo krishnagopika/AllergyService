@@ -17,8 +17,7 @@ pipeline {
                 echo 'Deploying.'
             }
         }
-    }
-    stages {
+   
   	stage('Maven Install') {
     	agent {
       	docker {
