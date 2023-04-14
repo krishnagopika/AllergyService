@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Docker Build') {
+    	agent any
+           steps {
+      	    sh 'docker build -t pms:latest '
+            }
+         }
         stage('Build') {
             steps {
                 echo 'Building'
@@ -26,12 +32,6 @@ pipeline {
       }
       steps {
       	sh 'mvn clean install'
-      }
-    }
-    stage('Docker Build') {
-    	agent any
-      steps {
-      	sh 'docker build -t pms:latest .'
       }
     }
   }
