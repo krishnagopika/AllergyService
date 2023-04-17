@@ -8,10 +8,10 @@ pipeline {
                 https://github.com/krishnagopika/AllergyService.git'
                     }
         }
-        stage('Maven Install') {
-      steps {
-      	sh 'mvn clean install'
-      }
+//         stage('Maven Install') {
+//       steps {
+//       	sh 'mvn clean install'
+//       }
         stage('Docker Build') {
     	agent any
            steps {
