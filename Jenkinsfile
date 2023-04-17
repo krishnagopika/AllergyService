@@ -2,6 +2,8 @@ pipeline {
     agent any
      
     stages {
+    stage 'Clone the project' 
+    git ' https://github.com/krishnagopika/AllergyService.git'
         stage('Maven Install') {
       steps {
       	sh 'mvn clean install'
