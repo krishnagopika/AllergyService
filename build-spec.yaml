@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  pre-build:
+    commands:
+    - echo "Pre-Build Commands"
+  build:
+    commands:
+    - echo "Build Commands"
+  post-build:
+    commands:
+    - echo "post build commands"
+artifacts:
+  files:
+   - target/**
